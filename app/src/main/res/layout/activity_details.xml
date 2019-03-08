@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".details.DetailsActivity">
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/sliding_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        sothree:umanoPanelHeight="80dp"
+        sothree:umanoShadowHeight="4dp"
+        sothree:umanoParallaxOffset="100dp"
+        sothree:umanoOverlay="true"
+        sothree:umanoFadeColor="@android:color/transparent"
+        sothree:umanoScrollableView="@+id/recyclerView_milestones">
+
+        <!-- MAIN CONTENT -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <com.google.android.gms.maps.MapView
+                    android:id="@+id/map"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+        <!-- SLIDING LAYOUT -->
+        <LinearLayout
+            android:id="@+id/dragView"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="#ffffff"
+            android:focusable="false"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:id="@+id/recyclerView_milestones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbars="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/name_venue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toStartOf="@+id/postal_venue"
+                    android:layout_margin="12dp"
+                    android:ellipsize="marquee"
+                    android:maxLines="2"
+                    android:text=""
+                    android:textSize="22sp"
+                    android:textColor="#4D4D4D"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/sort_venue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#6F6F6F"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_below="@+id/name_venue"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/address_venue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#6F6F6F"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_below="@+id/sort_venue"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/postal_venue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#888888"
+                    android:layout_margin="12dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/country_venue"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/address_venue"
+                    android:layout_marginStart="12dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/state_venue"
+                    android:layout_width="wrap_content"
+                    android:layout_toRightOf="@id/country_venue"
+                    android:layout_below="@id/address_venue"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/city_venue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/country_venue"
+                    android:layout_marginLeft="12dp"
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/category_venue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="16dp"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+</LinearLayout>

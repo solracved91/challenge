@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:background="?android:selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/iv_icon_venue"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@mipmap/ic_launcher"
+        android:padding="6dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/iv_icon_venue"
+        android:layout_toStartOf="@id/iv_favorite_venue"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_name_venue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:text="Cafetería Cofffgsfsfdsfdfdffsfsdfdfdfde 432"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/tv_category_venue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceListItemSmall"
+            android:text="Cafetería"/>
+
+        <TextView
+            android:id="@+id/tv_distance_venue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceListItemSecondary"
+            android:text="8 km"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_favorite_venue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="6dp"
+        android:src="@drawable/ic_favorite_border_gray_24dp"
+        />
+
+</RelativeLayout>
