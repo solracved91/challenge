@@ -8,8 +8,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ApiClient {
 
     public static final String BASE_URL = "https://api.foursquare.com/v2/";
-    public static final String CLIENT_ID = "FJ0KZAL0DEGDJBC11AI2U0BTVFUQJ3J4JDLN0QY1RW2O5LJ2";
-    public static final String CLIENT_SECRET = "T1R4T2LDK1V5GBG0UCTRNFP1DGI13S3WWHKJKQJUYX5JITQD";
+    public static final String CLIENT_ID = "";
+    public static final String CLIENT_SECRET = "";
     public static final String NEAR = "Seattle,+WA";
     public static final String V = "20180401";
     public static final int LIMIT = 20;
